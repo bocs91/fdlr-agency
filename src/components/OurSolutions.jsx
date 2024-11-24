@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import Cybersecurity from '../assets/icons/cybersecurity.svg';
+
+// Charger dynamiquement tous les fichiers SVG dans un objet
+const icons = import.meta.glob("../assets/icons/*.svg", { eager: true });
 
 const OurSolutions = () => {
   const solutions = [
@@ -7,6 +9,7 @@ const OurSolutions = () => {
       id: 1,
       title: "Le développement web",
       description: "Nous construisons des sites web modernes et performants pour répondre aux besoins de vos utilisateurs.",
+      icon: "code.svg",
       points: [
         "Développement front-end",
         "Développement back-end",
@@ -22,6 +25,7 @@ const OurSolutions = () => {
       id: 2,
       title: "Les solutions SaaS",
       description: "Conception et déploiement de solutions SaaS adaptées à vos objectifs d'entreprise.",
+      icon: "cloud.svg",
       points: [
         "Plateformes cloud sécurisées",
         "Applications multi-utilisateurs",
@@ -37,6 +41,7 @@ const OurSolutions = () => {
       id: 3,
       title: "La conception UI/UX",
       description: "Des interfaces modernes et intuitives qui captivent vos utilisateurs.",
+      icon: "design.svg",
       points: [
         "La conception de système",
         "La conception artistique",
@@ -52,6 +57,7 @@ const OurSolutions = () => {
       id: 4,
       title: "La cybersécurité",
       description: "Protégez vos données et vos systèmes grâce à nos solutions avancées de cybersécurité.",
+      icon: "cybersecurity.svg",
       points: [
         "Analyse des vulnérabilités",
         "Gestion des risques",
@@ -67,6 +73,7 @@ const OurSolutions = () => {
       id: 5,
       title: "La vidéo sur les réseaux sociaux",
       description: "Créez des vidéos engageantes pour maximiser votre impact sur les réseaux sociaux.",
+      icon: "video.svg",
       points: [
         "Production vidéo",
         "Montage créatif",
@@ -82,6 +89,7 @@ const OurSolutions = () => {
       id: 6,
       title: "Le virtuel 3D",
       description: "Plongez dans l'avenir avec nos solutions immersives en 3D virtuelle.",
+      icon: "3D.svg",
       points: [
         "Modélisation 3D",
         "Expériences VR",
@@ -112,7 +120,7 @@ const OurSolutions = () => {
           >
             <h2 className="font-inter text-4xl font-light">Nos solutions</h2>
           </div>
-
+  
           {/* Trait horizontal */}
           <div
             style={{
@@ -124,14 +132,14 @@ const OurSolutions = () => {
               background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
             }}
           ></div>
-
+  
           {/* Texte explicatif */}
           <p style={{ fontSize: "1.125rem", color: "#6B7280" }}>
             On vous propose des solutions professionnelles qui correspondent à vos
             besoins et à vos objectifs.
           </p>
         </div>
-
+  
         {/* Contenu principal */}
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
           {/* Sidebar */}
@@ -157,7 +165,7 @@ const OurSolutions = () => {
                   {String(solutions.length).padStart(2, "0")}
                 </div>
               </div>
-
+  
               {/* Solutions List */}
               <ul className="space-y-4">
                 {solutions.map((solution) => (
@@ -176,7 +184,7 @@ const OurSolutions = () => {
               </ul>
             </div>
           </div>
-
+  
           {/* Main Content */}
           <div className="lg:w-2/3 flex flex-col items-start mt-12 lg:mt-0 lg:pl-8">
             <div className="bg-white border rounded-lg shadow-lg p-6 w-full">
@@ -188,18 +196,24 @@ const OurSolutions = () => {
                   }}
                 >
                   <div className="h-12 w-12 bg-white flex items-center justify-center rounded-md">
-                    <img src={Cybersecurity} alt="Cybersécurité" className="h-8 w-8" />
+                    <img
+                      src={icons[`../assets/icons/${currentSolution.icon}`].default}
+                      alt={currentSolution.title}
+                      className="h-8 w-8"
+                    />
                   </div>
                 </div>
-
+  
                 <div className="ml-4">
                   <h3 className="font-inter text-xl font-bold text-[#1F4037]">
                     {currentSolution.title}
                   </h3>
-                  <p className="font-montserrat text-gray-500">{currentSolution.description}</p>
+                  <p className="font-montserrat text-gray-500">
+                    {currentSolution.description}
+                  </p>
                 </div>
               </div>
-
+  
               {/* Points */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 {currentSolution.points.map((point, index) => (
@@ -211,7 +225,7 @@ const OurSolutions = () => {
                   </div>
                 ))}
               </div>
-
+  
               {/* Advantages */}
               <h4 className="font-inter text-lg font-semibold text-[#1F4037] mb-4">
                 Les Avantages
@@ -231,7 +245,7 @@ const OurSolutions = () => {
                   </div>
                 ))}
               </div>
-
+  
               {/* Tools */}
               <h4 className="font-inter text-lg font-semibold text-[#1F4037] mb-4">
                 Technologies utilisées
@@ -245,7 +259,7 @@ const OurSolutions = () => {
                       background: "linear-gradient(to top left, #99F2C8, #1F4037)",
                     }}
                   >
-                    <div className="font-inter bg-white rounded-lg p-2 text-center text-gray-500">
+                      <div className="font-inter bg-white rounded-lg p-2 text-center text-gray-500">
                       {tool}
                     </div>
                   </div>
@@ -255,20 +269,19 @@ const OurSolutions = () => {
           </div>
         </div>
       </section>
-
+  
       {/* Technologies maîtrisées section */}
       <div className="max-w-7xl mx-auto px-8 pb-16">
         <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-8 rounded-3xl backdrop-blur-sm">
           <h2 className="font-inter text-2xl font-medium text-white text-center mb-3">
             Technologies maîtrisées
           </h2>
-          
           <p className="font-montserrat text-white/90 text-sm text-center mb-6 max-w-lg mx-auto">
-            Nos compétences couvrent un large éventail de technologies modernes pour répondre à tous vos besoins
+            Nos compétences couvrent un large éventail de technologies modernes
+            pour répondre à tous vos besoins.
           </p>
-          
           <div className="text-center">
-            <button 
+            <button
               onClick={() => alert("Réservation d'un appel bientôt disponible!")}
               className="bg-white/10 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
             >
@@ -279,6 +292,7 @@ const OurSolutions = () => {
       </div>
     </>
   );
+  
 };
 
 export default OurSolutions;
