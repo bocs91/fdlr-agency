@@ -4,11 +4,12 @@ import React, { useState } from "react";
 const icons = import.meta.glob("../assets/icons/**/*.svg", { eager: true });
 
 const OurSolutions = () => {
-  const solutions = [   
+  const solutions = [
     {
       id: 1,
       title: "Le développement web",
-      description: "Nous construisons des sites web modernes et performants pour répondre aux besoins de vos utilisateurs.",
+      description:
+        "Nous construisons des sites web modernes et performants pour répondre aux besoins de vos utilisateurs.",
       icon: "code.svg",
       points: [
         "Développement front-end",
@@ -28,7 +29,8 @@ const OurSolutions = () => {
     {
       id: 2,
       title: "Les solutions SaaS",
-      description: "Conception et déploiement de solutions SaaS adaptées à vos objectifs d'entreprise.",
+      description:
+        "Conception et déploiement de solutions SaaS adaptées à vos objectifs d'entreprise.",
       icon: "cloud.svg",
       points: [
         "Plateformes cloud sécurisées",
@@ -48,7 +50,8 @@ const OurSolutions = () => {
     {
       id: 3,
       title: "La conception UI/UX",
-      description: "Des interfaces modernes et intuitives qui captivent vos utilisateurs.",
+      description:
+        "Des interfaces modernes et intuitives qui captivent vos utilisateurs.",
       icon: "design.svg",
       points: [
         "La conception de système",
@@ -68,7 +71,8 @@ const OurSolutions = () => {
     {
       id: 4,
       title: "La cybersécurité",
-      description: "Protégez vos données et vos systèmes grâce à nos solutions avancées de cybersécurité.",
+      description:
+        "Protégez vos données et vos systèmes grâce à nos solutions avancées de cybersécurité.",
       icon: "cybersecurity.svg",
       points: [
         "Analyse des vulnérabilités",
@@ -88,7 +92,8 @@ const OurSolutions = () => {
     {
       id: 5,
       title: "La vidéo sur les réseaux sociaux",
-      description: "Créez des vidéos engageantes pour maximiser votre impact sur les réseaux sociaux.",
+      description:
+        "Créez des vidéos engageantes pour maximiser votre impact sur les réseaux sociaux.",
       icon: "video.svg",
       points: [
         "Production vidéo",
@@ -104,7 +109,8 @@ const OurSolutions = () => {
     {
       id: 6,
       title: "Le virtuel 3D",
-      description: "Plongez dans l'avenir avec nos solutions immersives en 3D virtuelle.",
+      description:
+        "Plongez dans l'avenir avec nos solutions immersives en 3D virtuelle.",
       icon: "3D.svg",
       points: [
         "Modélisation 3D",
@@ -150,7 +156,8 @@ const OurSolutions = () => {
             }}
           ></div>
           <p style={{ fontSize: "1.125rem", color: "#6B7280" }}>
-            On vous propose des solutions professionnelles qui correspondent à vos besoins et à vos objectifs.
+            On vous propose des solutions professionnelles qui correspondent à
+            vos besoins et à vos objectifs.
           </p>
         </div>
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
@@ -197,12 +204,15 @@ const OurSolutions = () => {
                 <div
                   className="p-[2px] rounded-md"
                   style={{
-                    background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
+                    background:
+                      "linear-gradient(to bottom right, #99F2C8, #1F4037)",
                   }}
                 >
                   <div className="h-12 w-12 bg-white flex items-center justify-center rounded-md">
                     <img
-                      src={icons[`../assets/icons/${currentSolution.icon}`].default}
+                      src={
+                        icons[`../assets/icons/${currentSolution.icon}`].default
+                      }
                       alt={currentSolution.title}
                       className="h-8 w-8"
                     />
@@ -236,7 +246,8 @@ const OurSolutions = () => {
                     key={index}
                     className="p-[1px] rounded-lg"
                     style={{
-                      background: "linear-gradient(to top left, #99F2C8, #1F4037)",
+                      background:
+                        "linear-gradient(to top left, #99F2C8, #1F4037)",
                     }}
                   >
                     <div className="font-inter bg-white rounded-lg p-2 text-center text-gray-500">
@@ -252,11 +263,10 @@ const OurSolutions = () => {
                 {currentSolution.tools.map((tool, index) => (
                   <div key={index}>
                     <img
-  src="/src/assets/icons/devicons/javascript/react.svg"
-  alt="React Icon"
-  className="h-10 w-10"
-/>
-
+                      src="/src/assets/icons/devicons/javascript/react.svg"
+                      alt="React Icon"
+                      className="h-10 w-10"
+                    />
                   </div>
                 ))}
               </div>
@@ -264,7 +274,7 @@ const OurSolutions = () => {
           </div>
         </div>
       </section>
-      <div className="max-w-7xl mx-auto px-8 pb-16">
+      <div className="max-w-4xl mx-auto px-8 pb-16">
         <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-8 rounded-3xl backdrop-blur-sm">
           <h2 className="font-inter text-2xl font-medium text-white text-center mb-3">
             Technologies maîtrisées
@@ -275,7 +285,9 @@ const OurSolutions = () => {
           </p>
           <div className="text-center">
             <button
-              onClick={() => alert("Réservation d'un appel bientôt disponible!")}
+              onClick={() =>
+                alert("Réservation d'un appel bientôt disponible!")
+              }
               className="bg-white/10 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
             >
               Réservez un appel
