@@ -23,7 +23,7 @@ const OurSolutions = () => {
       tools: [
         "../devicons/javascript/react.svg",
         "../devicons/javascript/node.svg",
-        "../devicons/tools/tailwind.svg",
+        "../devicons/tools/tailwind.svg", 
       ],
     },
     {
