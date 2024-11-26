@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection'
 import OurSolutions from './components/OurSolutions'
 import CompletedProjects from './components/CompletedProjects'
 import ContactSection from './components/ContactSection'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <OurSolutions />
     <CompletedProjects />
     <ContactSection />
+    <Footer />
     </>
   )
 }
