@@ -21,9 +21,9 @@ const OurSolutions = () => {
       ],
       advantages: ["Code optimisé", "Support technique continu"],
       tools: [
-        "../devicons/javascript/java.svg",
+        "../devicons/javascript/react.svg",
         "../devicons/javascript/node.svg",
-        "../devicons/tools/tailwind.svg",
+        "../devicons/tools/tailwind.svg", 
       ],
     },
     {
@@ -84,9 +84,9 @@ const OurSolutions = () => {
       ],
       advantages: ["Sécurité maximale", "Conformité réglementaire"],
       tools: [
-        "tools/docker.svg",
-        "tools/kubernetes.svg",
-        "javascript/react.svg",
+        "../devicons/cloud/aws.svg",
+        "../devicons/tools/kubernetes.svg",
+        "../devicons/javascript/react.svg",
       ],
     },
     {
@@ -263,7 +263,7 @@ const OurSolutions = () => {
                 {currentSolution.tools.map((tool, index) => (
                   <div key={index}>
                     <img
-                      src="/src/assets/icons/devicons/java/java.svg"
+                      src={`/src/assets/icons/devicons/${tool}`}
                       alt="React Icon"
                       className="h-10 w-10"
                     />
