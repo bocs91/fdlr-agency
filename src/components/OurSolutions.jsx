@@ -84,9 +84,9 @@ const OurSolutions = () => {
       ],
       advantages: ["Sécurité maximale", "Conformité réglementaire"],
       tools: [
-        "tools/docker.svg",
-        "tools/kubernetes.svg",
-        "javascript/react.svg",
+        "../devicons/cloud/aws.svg",
+        "../devicons/tools/kubernetes.svg",
+        "../devicons/javascript/react.svg",
       ],
     },
     {
