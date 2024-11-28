@@ -273,8 +273,7 @@ const OurSolutions = () => {
             </div>
           </div>
         </div>
-      </section>
-      <div className="max-w-4xl mx-auto px-4 sm:px-8 pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 pb-16 pt-32">
         <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-4 sm:p-8 rounded-3xl backdrop-blur-sm">
           <h2 className="font-inter text-lg sm:text-2xl font-medium text-white text-center mb-2 sm:mb-3">
             Technologies maîtrisées
@@ -295,6 +294,8 @@ const OurSolutions = () => {
           </div>
         </div>
       </div>
+      </section>
+
     </>
   );
 };
