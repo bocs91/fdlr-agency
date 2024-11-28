@@ -5,7 +5,7 @@ import LocationIcon from "../assets/icons/location.svg";
 
 const ContactUs = () => {
   return (
-    <section className="bg-gray-50 py-16 px-8">
+    <section id="contact" className="bg-gray-50 py-16 px-8">
       {/* Titre principal */}
       <div className="text-center mb-12">
         <h2

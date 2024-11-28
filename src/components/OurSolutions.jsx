@@ -133,7 +133,7 @@ const OurSolutions = () => {
 
   return (
     <>
-      <section className="bg-gray-50 py-16 px-4 sm:px-8">
+      <section id="services" className="bg-gray-50 py-16 px-4 sm:px-8">
         <div className="text-center mb-8">
           <div
             style={{
@@ -256,7 +256,7 @@ const OurSolutions = () => {
                   </div>
                 ))}
               </div>
-              <h4 className="font-inter text-base sm:text-lg font-semibold text-[#1F4037] mb-2 sm:mb-4">
+              <h4 id="technologies" className="font-inter text-base sm:text-lg font-semibold text-[#1F4037] mb-2 sm:mb-4">
                 Technologies utilisées
               </h4>
               <div className="flex flex-wrap gap-4">

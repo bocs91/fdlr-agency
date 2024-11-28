@@ -32,7 +32,7 @@ const CompletedProjects = () => {
   const [currentProject, setCurrentProject] = useState(projects[0]);
 
   return (
-<section className="bg-gray-50 py-8 px-8">
+<section id="projects" className="bg-gray-50 py-8 px-8">
   {/* Titre principal */}
   <div className="text-center mb-8">
     <div
