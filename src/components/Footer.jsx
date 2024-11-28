@@ -29,27 +29,63 @@ const Footer = () => {
           <div className="flex space-x-4">
             <a
               href="#"
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300"
+              className="p-[2px] rounded-full transition-transform duration-300 group"
+              style={{
+                background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
+              }}
             >
-              <img src={TwitterIcon} alt="Twitter" className="h-5 w-5" />
+              <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1F4037]">
+                <img
+                  src={TwitterIcon}
+                  alt="Twitter"
+                  className="h-5 w-5 transition-all duration-300 group-hover:brightness-150 group-hover:invert"
+                />
+              </div>
             </a>
             <a
               href="#"
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300"
+              className="p-[2px] rounded-full transition-transform duration-300 group"
+              style={{
+                background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
+              }}
             >
-              <img src={FacebookIcon} alt="Facebook" className="h-5 w-5" />
+              <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1F4037]">
+                <img
+                  src={FacebookIcon}
+                  alt="Facebook"
+                  className="h-5 w-5 transition-all duration-300 group-hover:brightness-150 group-hover:invert"
+                />
+              </div>
             </a>
             <a
               href="#"
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300"
+              className="p-[2px] rounded-full transition-transform duration-300 group"
+              style={{
+                background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
+              }}
             >
-              <img src={InstagramIcon} alt="Instagram" className="h-5 w-5" />
+              <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1F4037]">
+                <img
+                  src={InstagramIcon}
+                  alt="Instagram"
+                  className="h-5 w-5 transition-all duration-300 group-hover:brightness-150 group-hover:invert"
+                />
+              </div>
             </a>
             <a
               href="#"
-              className="p-2 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-300"
+              className="p-[2px] rounded-full transition-transform duration-300 group"
+              style={{
+                background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
+              }}
             >
-              <img src={LinkedInIcon} alt="LinkedIn" className="h-5 w-5" />
+              <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1F4037]">
+                <img
+                  src={LinkedInIcon}
+                  alt="LinkedIn"
+                  className="h-5 w-5 transition-all duration-300 group-hover:brightness-150 group-hover:invert"
+                />
+              </div>
             </a>
           </div>
         </div>
