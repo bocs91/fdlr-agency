@@ -9,7 +9,7 @@ const OurSolutions = () => {
       id: 1,
       title: "Le développement web",
       description:
-        "Nous construisons des sites web modernes et performants pour répondre aux besoins de vos utilisateurs.",
+        "Nous créons des sites web modernes et performants adaptés à vos utilisateurs.",
       icon: "code.svg",
       points: [
         "Développement front-end",
@@ -163,7 +163,7 @@ const OurSolutions = () => {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
           <div className="lg:w-1/3 flex flex-col items-start border-r border-gray-200 pr-8 relative">
             <div className="relative flex items-center">
-              <div className="relative h-64 w-2 bg-gray-200 rounded-full mr-4">
+              <div className="relative h-96 w-2 bg-gray-200 rounded-full mr-4">
                 <div
                   className="absolute top-0 w-full bg-[#1F4037] rounded-full transition-all duration-300"
                   style={{
@@ -171,7 +171,7 @@ const OurSolutions = () => {
                   }}
                 ></div>
                 <div
-                  className="absolute -bottom-16 -left-[6px] text-gray-500 font-medium text-xs sm:text-sm"
+                  className="absolute -bottom-14 -left-[6px] text-gray-500 font-medium text-xs sm:text-sm"
                   style={{
                     writingMode: "vertical-rl",
                     transform: "rotate(180deg)",
@@ -186,11 +186,10 @@ const OurSolutions = () => {
                   <li
                     key={solution.id}
                     onClick={() => setCurrentSolution(solution)}
-                    className={`font-lato px-2 py-3 sm:py-4 cursor-pointer ${
-                      currentSolution.id === solution.id
-                        ? "bg-[#1F4037] text-white rounded-full"
-                        : "text-gray-800 hover:text-[#1F4037]"
-                    }`}
+                    className={`font-lato px-2 py-3 sm:py-4 cursor-pointer ${currentSolution.id === solution.id
+                      ? "bg-[#1F4037] text-white rounded-full"
+                      : "text-gray-800 hover:text-[#1F4037]"
+                      }`}
                   >
                     {solution.title}
                   </li>
@@ -274,26 +273,26 @@ const OurSolutions = () => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-8 pb-16 pt-32">
-        <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-4 sm:p-8 rounded-3xl backdrop-blur-sm">
-          <h2 className="font-inter text-lg sm:text-2xl font-medium text-white text-center mb-2 sm:mb-3">
-            Technologies maîtrisées
-          </h2>
-          <p className="font-montserrat text-white/90 text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-lg mx-auto">
-            Nos compétences couvrent un large éventail de technologies modernes
-            pour répondre à tous vos besoins.
-          </p>
-          <div className="text-center">
-            <button
-              onClick={() =>
-                alert("Réservation d'un appel bientôt disponible!")
-              }
-              className="bg-white/10 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
-            >
-              Réservez un appel
-            </button>
+          <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-4 sm:p-8 rounded-3xl backdrop-blur-sm">
+            <h2 className="font-inter text-lg sm:text-2xl font-medium text-white text-center mb-2 sm:mb-3">
+              Technologies maîtrisées
+            </h2>
+            <p className="font-montserrat text-white/90 text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-lg mx-auto">
+              Nos compétences couvrent un large éventail de technologies modernes
+              pour répondre à tous vos besoins.
+            </p>
+            <div className="text-center">
+              <button
+                onClick={() =>
+                  alert("Réservation d'un appel bientôt disponible!")
+                }
+                className="bg-white/10 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
+              >
+                Réservez un appel
+              </button>
+            </div>
           </div>
         </div>
-      </div>
       </section>
 
     </>
