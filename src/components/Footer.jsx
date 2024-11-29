@@ -6,7 +6,7 @@ import LinkedInIcon from "../assets/icons/LinkedIn.svg";
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-gray-50">
       {/* Container pour le footer */}
       <div className="container mx-auto py-6 px-4">
         {/* Barre fine de séparation au-dessus de tout le contenu (texte et icônes) */}
