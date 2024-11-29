@@ -62,65 +62,65 @@ const CompletedProjects = () => {
 
   {/* Contenu principal */}
   <div className="flex justify-center">
-    <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 items-start max-w-7xl w-full">
-      {/* Carte du projet */}
-      <div className="bg-white border rounded-lg shadow-lg p-6 flex flex-col justify-between h-full">
-        <div>
-          <h3 className="font-inter text-2xl font-semibold text-gray-800 mb-2">
-            {currentProject.title}
-          </h3>
-          <p className="font-montserrat text-gray-600 mb-4">
-            {currentProject.description}
-          </p>
-          <div className="flex gap-4 mb-4">
-            {currentProject.tools.map((tool, index) => (
-              <img
-                key={index}
-                src={`/src/assets/icons/devicons/others/${tool}`}
-                alt={tool}
-                className="h-8 w-8"
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Statistiques */}
-        <div className="flex justify-between items-center gap-4 mt-4">
-          {currentProject.stats.map((stat, index) => (
-            <div
+  <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr] gap-6 items-start max-w-7xl w-full">
+    {/* Carte du projet */}
+    <div className="bg-white border rounded-lg shadow-lg p-6 flex flex-col justify-between h-full">
+      <div>
+        <h3 className="font-inter text-2xl font-semibold text-gray-800 mb-2">
+          {currentProject.title}
+        </h3>
+        <p className="font-montserrat text-gray-600 mb-4">
+          {currentProject.description}
+        </p>
+        <div className="flex gap-4 mb-4">
+          {currentProject.tools.map((tool, index) => (
+            <img
               key={index}
-              className="relative flex flex-col items-center justify-center w-20 h-20 lg:w-24 lg:h-24"
-            >
-              <div
-                className="relative w-full h-full rounded-full"
-                style={{
-                  background: `conic-gradient(#1F4037 ${stat.value}%, #E5E7EB 0%)`,
-                }}
-              >
-                <div className="absolute inset-[2px] bg-white rounded-full flex items-center justify-center">
-                  <span className="text-sm lg:text-lg font-bold text-[#1F4037]">
-                    {stat.value}%
-                  </span>
-                </div>
-              </div>
-              <span className="mt-2 text-xs lg:text-sm text-gray-800">
-                {stat.label}
-              </span>
-            </div>
+              src={`/src/assets/icons/devicons/others/${tool}`}
+              alt={tool}
+              className="h-8 w-8"
+            />
           ))}
         </div>
       </div>
 
-      {/* Image du projet */}
-      <div className="hidden lg:block">
-        <img
-          src={currentProject.image}
-          alt={currentProject.title}
-          className="rounded-xl w-full max-w-[550px] max-h-[350px] object-cover mx-auto"
-        />
+      {/* Statistiques */}
+      <div className="flex justify-between items-center gap-4 mt-4">
+        {currentProject.stats.map((stat, index) => (
+          <div
+            key={index}
+            className="relative flex flex-col items-center justify-center w-20 h-20 lg:w-24 lg:h-24"
+          >
+            <div
+              className="relative w-full h-full rounded-full"
+              style={{
+                background: `conic-gradient(#1F4037 ${stat.value}%, #E5E7EB 0%)`,
+              }}
+            >
+              <div className="absolute inset-[2px] bg-white rounded-full flex items-center justify-center">
+                <span className="text-sm lg:text-lg font-bold text-[#1F4037]">
+                  {stat.value}%
+                </span>
+              </div>
+            </div>
+            <span className="mt-2 text-xs lg:text-sm text-gray-800">
+              {stat.label}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
+
+    {/* Image du projet */}
+    <div className="hidden lg:block">
+      <img
+        src={currentProject.image}
+        alt={currentProject.title}
+        className="rounded-xl w-full max-h-[300px] object-cover mx-auto"
+      />
+    </div>
   </div>
+</div>
 
   {/* Navigation */}
   <div className="flex items-center justify-center mt-6">
