@@ -9,7 +9,7 @@ const OurSolutions = () => {
       id: 1,
       title: "Le développement web",
       description:
-        "Nous construisons des sites web modernes et performants pour répondre aux besoins de vos utilisateurs.",
+        "Nous créons des sites web modernes et performants adaptés à vos utilisateurs.",
       icon: "code.svg",
       points: [
         "Développement front-end",
@@ -23,7 +23,7 @@ const OurSolutions = () => {
       tools: [
         "../devicons/javascript/react.svg",
         "../devicons/javascript/node.svg",
-        "../devicons/tools/tailwind.svg", 
+        "../devicons/tools/tailwind.svg",
       ],
     },
     {
@@ -128,12 +128,12 @@ const OurSolutions = () => {
       ],
     },
   ];
-  console.log(icons);
+
   const [currentSolution, setCurrentSolution] = useState(solutions[0]);
 
   return (
     <>
-      <section className="bg-gray-50 py-16 px-8">
+      <section id="services" className="bg-gray-50 py-16 px-4 sm:px-8">
         <div className="text-center mb-8">
           <div
             style={{
@@ -143,7 +143,7 @@ const OurSolutions = () => {
               color: "transparent",
             }}
           >
-            <h2 className="font-inter text-4xl font-light">Nos solutions</h2>
+            <h2 className="font-inter text-3xl sm:text-4xl font-light">Nos solutions</h2>
           </div>
           <div
             style={{
@@ -155,7 +155,7 @@ const OurSolutions = () => {
               background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
             }}
           ></div>
-          <p style={{ fontSize: "1.125rem", color: "#6B7280" }}>
+          <p className="text-sm sm:text-base text-gray-600">
             On vous propose des solutions professionnelles qui correspondent à
             vos besoins et à vos objectifs.
           </p>
@@ -163,7 +163,7 @@ const OurSolutions = () => {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
           <div className="lg:w-1/3 flex flex-col items-start border-r border-gray-200 pr-8 relative">
             <div className="relative flex items-center">
-              <div className="relative h-64 w-2 bg-gray-200 rounded-full mr-4">
+              <div className="relative h-96 w-2 bg-gray-200 rounded-full mr-4">
                 <div
                   className="absolute top-0 w-full bg-[#1F4037] rounded-full transition-all duration-300"
                   style={{
@@ -171,7 +171,7 @@ const OurSolutions = () => {
                   }}
                 ></div>
                 <div
-                  className="absolute -bottom-16 -left-[6px] text-gray-500 font-medium text-sm"
+                  className="absolute -bottom-14 -left-[6px] text-gray-500 font-medium text-xs sm:text-sm"
                   style={{
                     writingMode: "vertical-rl",
                     transform: "rotate(180deg)",
@@ -181,16 +181,15 @@ const OurSolutions = () => {
                   {String(solutions.length).padStart(2, "0")}
                 </div>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-2 sm:space-y-4">
                 {solutions.map((solution) => (
                   <li
                     key={solution.id}
                     onClick={() => setCurrentSolution(solution)}
-                    className={`font-lato px-2 py-4 cursor-pointer ${
-                      currentSolution.id === solution.id
-                        ? "bg-[#1F4037] text-white rounded-full"
-                        : "text-gray-800 hover:text-[#1F4037]"
-                    }`}
+                    className={`font-lato px-2 py-3 sm:py-4 cursor-pointer ${currentSolution.id === solution.id
+                      ? "bg-[#1F4037] text-white rounded-full"
+                      : "text-gray-800 hover:text-[#1F4037]"
+                      }`}
                   >
                     {solution.title}
                   </li>
@@ -198,9 +197,9 @@ const OurSolutions = () => {
               </ul>
             </div>
           </div>
-          <div className="lg:w-2/3 flex flex-col items-start mt-12 lg:mt-0 lg:pl-8">
-            <div className="bg-white border rounded-lg shadow-lg p-6 w-full">
-              <div className="flex items-center mb-6">
+          <div className="lg:w-2/3 flex flex-col items-start mt-8 sm:mt-12 lg:mt-0 lg:pl-8">
+            <div className="bg-white border rounded-lg shadow-lg p-4 sm:p-6 w-full">
+              <div className="flex items-center mb-4 sm:mb-6">
                 <div
                   className="p-[2px] rounded-md"
                   style={{
@@ -208,39 +207,39 @@ const OurSolutions = () => {
                       "linear-gradient(to bottom right, #99F2C8, #1F4037)",
                   }}
                 >
-                  <div className="h-12 w-12 bg-white flex items-center justify-center rounded-md">
+                  <div className="h-10 w-10 bg-white flex items-center justify-center rounded-md">
                     <img
                       src={
                         icons[`../assets/icons/${currentSolution.icon}`].default
                       }
                       alt={currentSolution.title}
-                      className="h-8 w-8"
+                      className="h-6 w-6 sm:h-8 sm:w-8"
                     />
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-inter text-xl font-bold text-[#1F4037]">
+                  <h3 className="font-inter text-lg sm:text-xl font-bold text-[#1F4037]">
                     {currentSolution.title}
                   </h3>
-                  <p className="font-montserrat text-gray-500">
+                  <p className="font-montserrat text-gray-500 text-sm sm:text-base">
                     {currentSolution.description}
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-4 sm:mb-6">
                 {currentSolution.points.map((point, index) => (
                   <div key={index} className="flex items-start">
                     <span className="mr-2 text-transparent bg-clip-text bg-gradient-to-br from-[#99F2C8] to-[#1F4037]">
                       ➜
                     </span>
-                    <p className="text-gray-500">{point}</p>
+                    <p className="text-gray-500 text-sm sm:text-base">{point}</p>
                   </div>
                 ))}
               </div>
-              <h4 className="font-inter text-lg font-semibold text-[#1F4037] mb-4">
+              <h4 className="font-inter text-base sm:text-lg font-semibold text-[#1F4037] mb-2 sm:mb-4">
                 Les Avantages
               </h4>
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 mb-4 sm:mb-6">
                 {currentSolution.advantages.map((advantage, index) => (
                   <div
                     key={index}
@@ -250,13 +249,13 @@ const OurSolutions = () => {
                         "linear-gradient(to top left, #99F2C8, #1F4037)",
                     }}
                   >
-                    <div className="font-inter bg-white rounded-lg p-2 text-center text-gray-500">
+                    <div className="font-inter bg-white rounded-lg p-2 text-center text-sm sm:text-base text-gray-500">
                       {advantage}
                     </div>
                   </div>
                 ))}
               </div>
-              <h4 className="font-inter text-lg font-semibold text-[#1F4037] mb-4">
+              <h4 id="technologies" className="font-inter text-base sm:text-lg font-semibold text-[#1F4037] mb-2 sm:mb-4">
                 Technologies utilisées
               </h4>
               <div className="flex flex-wrap gap-4">
@@ -265,7 +264,7 @@ const OurSolutions = () => {
                     <img
                       src={`/src/assets/icons/devicons/${tool}`}
                       alt="React Icon"
-                      className="h-10 w-10"
+                      className="h-8 w-8 sm:h-10 sm:w-10"
                     />
                   </div>
                 ))}
@@ -273,28 +272,29 @@ const OurSolutions = () => {
             </div>
           </div>
         </div>
-      </section>
-      <div className="max-w-4xl mx-auto px-8 pb-16">
-        <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-8 rounded-3xl backdrop-blur-sm">
-          <h2 className="font-inter text-2xl font-medium text-white text-center mb-3">
-            Technologies maîtrisées
-          </h2>
-          <p className="font-montserrat text-white/90 text-sm text-center mb-6 max-w-lg mx-auto">
-            Nos compétences couvrent un large éventail de technologies modernes
-            pour répondre à tous vos besoins.
-          </p>
-          <div className="text-center">
-            <button
-              onClick={() =>
-                alert("Réservation d'un appel bientôt disponible!")
-              }
-              className="bg-white/10 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
-            >
-              Réservez un appel
-            </button>
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 pb-16 pt-32">
+          <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-4 sm:p-8 rounded-3xl backdrop-blur-sm">
+            <h2 className="font-inter text-lg sm:text-2xl font-medium text-white text-center mb-2 sm:mb-3">
+              Technologies maîtrisées
+            </h2>
+            <p className="font-montserrat text-white/90 text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-lg mx-auto">
+              Nos compétences couvrent un large éventail de technologies modernes
+              pour répondre à tous vos besoins.
+            </p>
+            <div className="text-center">
+              <button
+                onClick={() =>
+                  alert("Réservation d'un appel bientôt disponible!")
+                }
+                className="bg-white/10 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
+              >
+                Réservez un appel
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
     </>
   );
 };
