@@ -2,11 +2,11 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex justify-center items-center h-screen text-center bg-gradient-to-b from-gray-100 to-gray-200 px-4">
+    <section className="relative flex justify-center items-center h-screen text-center bg-gradient-to-b from-gray-100 to-gray-200 px-4 overflow-hidden">
       {/* Blur vert autour */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-20 -left-10 h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] rounded-full bg-gradient-to-br from-[#99F2C8] to-[#1F4037] opacity-30 blur-3xl"></div>
-        <div className="absolute -bottom-20 -right-10 h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] rounded-full bg-gradient-to-br from-[#99F2C8] to-[#1F4037] opacity-30 blur-3xl"></div>
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] rounded-full bg-gradient-to-br from-[#99F2C8] to-[#1F4037] opacity-30 blur-3xl"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] rounded-full bg-gradient-to-br from-[#99F2C8] to-[#1F4037] opacity-30 blur-3xl"></div>
       </div>
 
       {/* Contenu */}
@@ -33,7 +33,7 @@ const HeroSection = () => {
           <div
             className="rounded-full p-[2px] inline-block"
             style={{
-              border: "1px solid green", // J'ai fait ça temporairement pour gérer la bordure
+              border: "1px solid green", // Bordure temporaire
             }}
           >
             {/* Bouton interne avec fond transparent */}
