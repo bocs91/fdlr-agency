@@ -31,26 +31,25 @@ const HeroSection = () => {
         <div className="mt-8 flex justify-center">
           {/* Conteneur externe pour gérer les bordures dégradées */}
           <div
-            className="rounded-full p-[2px] inline-block"
+            className="rounded-full  inline-block"
             style={{
               border: "1px solid green", // Bordure temporaire
             }}
           >
             {/* Bouton interne avec fond transparent */}
-            <div className="bg-transparent rounded-full">
-              <button className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#1F4037] bg-transparent rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
-                Commencez
-                <span
-                  className="ml-2 transform transition-transform duration-300"
-                  style={{
-                    fontWeight: "bold",
-                    color: "inherit",
-                  }}
-                >
-                  →
-                </span>
-              </button>
-            </div>
+            <button className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#1F4037] bg-transparent rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
+              Commencez
+              <span
+                className="ml-2 transform transition-transform duration-300"
+                style={{
+                  fontWeight: "bold",
+                  color: "inherit",
+                }}
+              >
+                →
+              </span>
+            </button>
+
           </div>
         </div>
       </div>
