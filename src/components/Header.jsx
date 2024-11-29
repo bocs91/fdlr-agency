@@ -142,20 +142,18 @@ const Header = () => {
             background: "linear-gradient(to top left, #99F2C8, #1F4037)", // Contour dégradé
           }}
         >
-          <div className="bg-white rounded-full">
-            <button className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-transparent rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
-              Prendre un RDV
-              <span
-                className="ml-2 transform transition-transform duration-300"
-                style={{
-                  fontWeight: "bold",
-                  color: "inherit",
-                }}
-              >
-                →
-              </span>
-            </button>
-          </div>
+          <button className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
+            Prendre un RDV
+            <span
+              className="ml-2 transform transition-transform duration-300"
+              style={{
+                fontWeight: "bold",
+                color: "inherit",
+              }}
+            >
+              →
+            </span>
+          </button>
         </div>
       </div>
     </header>
