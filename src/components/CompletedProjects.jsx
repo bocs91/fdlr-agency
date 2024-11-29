@@ -62,7 +62,7 @@ const CompletedProjects = () => {
 
   {/* Contenu principal */}
   <div className="flex justify-center">
-  <div className="grid grid-cols-1 lg:grid-cols-[2fr_1.5fr] gap-6 items-start max-w-7xl w-full">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start max-w-7xl w-full">
     {/* Carte du projet */}
     <div className="bg-white border rounded-lg shadow-lg p-6 flex flex-col justify-between h-full">
       <div>
@@ -116,7 +116,7 @@ const CompletedProjects = () => {
       <img
         src={currentProject.image}
         alt={currentProject.title}
-        className="rounded-xl w-full max-h-[300px] object-cover mx-auto"
+        className="rounded-xl w-full max-h-[350px] object-cover mx-auto"
       />
     </div>
   </div>
