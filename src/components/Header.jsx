@@ -1,7 +1,29 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const menuVariants = {
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+    closed: {
+      y: -100,
+      opacity: 0,
+      transition: {
+        duration: 0.3,
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
 
   return (
     <header className="flex justify-between items-center px-6 py-4 bg-white shadow-md font-montserrat">
@@ -12,9 +34,11 @@ const Header = () => {
 
       {/* Burger Menu Icon for Mobile */}
       <div className="md:hidden">
-        <button
+        <motion.button
           className="p-2 text-gray-800 rounded-md focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           {isMenuOpen ? (
             <svg
@@ -47,115 +71,80 @@ const Header = () => {
               />
             </svg>
           )}
-        </button>
+        </motion.button>
       </div>
 
       {/* Navigation (Hidden on mobile, visible on desktop) */}
       <nav className="hidden md:flex space-x-10">
-        <a
-          href="#services"
-          className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
-        >
-          <span className="mb-1 block">Services</span>
-          <span
-            className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
-          ></span>
-        </a>
-        <a
-          href="#technologies"
-          className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
-        >
-          <span className="mb-1 block">Technologies</span>
-          <span
-            className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
-          ></span>
-        </a>
-        <a
-          href="#projects"
-          className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
-        >
-          <span className="mb-1 block">Projets</span>
-          <span
-            className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
-          ></span>
-        </a>
-        <a
-          href="#contact"
-          className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
-        >
-          <span className="mb-1 block">Contact</span>
-          <span
-            className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
-          ></span>
-        </a>
+        {["Services", "Technologies", "Projets", "Contact"].map((item) => (
+          <motion.a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="mb-1 block">{item}</span>
+            <span
+              className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
+            ></span>
+          </motion.a>
+        ))}
       </nav>
 
-      {/* Mobile Menu (Visible only when the burger menu is open) */}
-      {isMenuOpen && (
-        <nav className="absolute top-16 left-0 w-full bg-gray-50 shadow-lg md:hidden z-50">
-          <ul className="flex flex-col items-center space-y-4 px-6 py-6">
-            <li>
-              <a
-                href="#services"
-                className="text-gray-800 hover:text-[#1F4037] transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#technologies"
-                className="text-gray-800 hover:text-[#1F4037] transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Technologies
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                className="text-gray-800 hover:text-[#1F4037] transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Projets
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="text-gray-800 hover:text-[#1F4037] transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      )}
+      {/* Mobile Menu (Animated with Variants) */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.nav
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="absolute top-16 left-0 w-full bg-gray-50 shadow-lg md:hidden z-50"
+          >
+            <ul className="flex flex-col items-center space-y-4 px-6 py-6">
+              {["Services", "Technologies", "Projets", "Contact"].map((item) => (
+                <motion.li
+                  key={item}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a
+                    href={`#${item.toLowerCase()}`}
+                    className="text-gray-800 hover:text-[#1F4037] transition-colors duration-300"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
       {/* CTA */}
-      <div className="hidden md:block">
-        <div
-          className="p-[2px] rounded-full inline-block"
-          style={{
-            background: "linear-gradient(to top left, #99F2C8, #1F4037)", // Contour dégradé
-          }}
-        >
-          <button className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
-            Prendre un RDV
-            <span
-              className="ml-2 transform transition-transform duration-300"
-              style={{
-                fontWeight: "bold",
-                color: "inherit",
-              }}
-            >
-              →
-            </span>
-          </button>
-        </div>
-      </div>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="hidden md:block p-[2px] rounded-full inline-block"
+        style={{
+          background: "linear-gradient(to top left, #99F2C8, #1F4037)", // Contour dégradé
+        }}
+      >
+        <button className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
+          Prendre un RDV
+          <span
+            className="ml-2 transform transition-transform duration-300"
+            style={{
+              fontWeight: "bold",
+              color: "inherit",
+            }}
+          >
+            →
+          </span>
+        </button>
+      </motion.div>
     </header>
   );
 };
