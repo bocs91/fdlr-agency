@@ -184,7 +184,7 @@ const OurSolutions = () => {
                     onClick={() => {
                       setCurrentSolution(solution);
                     }}
-                    className={`font-lato px-2 py-3 sm:py-4 cursor-pointer ${
+                    className={`font-lato px-6 py-3 sm:py-4 cursor-pointer ${
                       currentSolution.id === solution.id
                         ? "bg-[#1F4037] text-white rounded-full"
                         : "text-gray-800 hover:text-[#1F4037]"
