@@ -1,5 +1,5 @@
 import React from "react";
-import { motion, useInView } from "framer-motion"; // Importer motion et useInView
+import { motion } from "motion/react";
 import PhoneIcon from "../assets/icons/phone.svg";
 import MailIcon from "../assets/icons/mail.svg";
 import LocationIcon from "../assets/icons/location.svg";
@@ -14,19 +14,19 @@ const ContactUs = () => {
     {
       icon: MailIcon,
       title: "Envoyez-nous un email",
-      description: "starsalign@studio.io",
+      description: "fdlragency@gmail.com",
     },
     {
       icon: LocationIcon,
       title: "Notre emplacement",
-      description: "12 rue Verdun, Paris, 75017",
+      description: "Région Île de France, France",
     },
   ];
 
   return (
     <section id="contact" className="bg-gray-50 py-16 px-8">
       {/* Titre principal */}
-      <div className="text-center mb-12">
+      <header className="text-center mb-12">
         <h2
           className="text-4xl font-light"
           style={{
@@ -36,13 +36,13 @@ const ContactUs = () => {
             color: "transparent",
           }}
         >
-          Réalisons vos idées ensemble{" "}
+          Donnez vie à vos ambitions digitales
         </h2>
         <span role="img" aria-label="Down Arrow" className="text-4xl">
           👇
         </span>
         <div
-          className="mx-auto mt-4 mb-6 h-[3px] w-64"
+          className="mx-auto mt-4 mb-6 h-[3px] w-80"
           style={{
             background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
           }}
@@ -51,22 +51,24 @@ const ContactUs = () => {
           Prêt à démarrer votre prochain projet ? Contactez-nous pour en
           discuter.
         </p>
-      </div>
+      </header>
 
       {/* Cartes de contact */}
       <div className="flex flex-col md:flex-row justify-center gap-8">
         {cards.map((card, index) => (
-          <motion.div
+          <motion.article
             key={index}
             className="bg-white shadow-lg rounded-3xl p-6 flex items-center gap-4 w-full sm:w-96 md:w-96 lg:w-96 xl:w-96 h-auto md:h-32 cursor-pointer transition-transform transform ease-out"
             whileHover={{
-              scale: 1.05, // Légère augmentation au survol
-              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)", // Ombre accentuée au survol
+              scale: 1.05,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.1)",
             }}
-            initial={{ opacity: 0, y: 20 }} // Initialisation cachée en bas
-            whileInView={{ opacity: 1, y: 0 }} // Animation d'apparition au scroll
-            viewport={{ once: true, amount: 0.5 }} // Se déclenche lorsque l'élément est visible à 50%
-            transition={{ duration: 0.1}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.1 }}
+            aria-labelledby={`card-title-${index}`}
+            role="region"
           >
             <div
               className="p-4 rounded-full flex items-center justify-center"
@@ -74,12 +76,13 @@ const ContactUs = () => {
             >
               <img
                 src={card.icon}
-                alt={`${card.title} Icon`}
+                alt={`Icône de ${card.title}`}
                 className="w-8 h-8 min-w-[32px] min-h-[32px] object-contain"
               />
             </div>
             <div className="text-left">
-              <h4
+              <h3
+                id={`card-title-${index}`}
                 className="text-lg font-medium"
                 style={{
                   background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
@@ -88,10 +91,10 @@ const ContactUs = () => {
                 }}
               >
                 {card.title}
-              </h4>
+              </h3>
               <p className="text-gray-500">{card.description}</p>
             </div>
-          </motion.div>
+          </motion.article>
         ))}
       </div>
     </section>
