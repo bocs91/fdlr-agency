@@ -60,7 +60,6 @@ const Header = () => {
         ))}
       </nav>
 
-      {/* Menu Mobile */}
       <div className="md:hidden">
         <motion.button
           className="p-2 text-gray-800 rounded-md focus:outline-none"
@@ -103,7 +102,6 @@ const Header = () => {
         </motion.button>
       </div>
 
-      {/* Menu Mobile animé */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.nav
@@ -141,13 +139,12 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      {/* Bouton CTA */}
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="hidden md:block p-[2px] rounded-full inline-block"
         style={{
-          background: "linear-gradient(to top left, #99F2C8, #1F4037)", // Contour dégradé
+          background: "linear-gradient(to top left, #99F2C8, #1F4037)", 
         }}
       >
         <button
