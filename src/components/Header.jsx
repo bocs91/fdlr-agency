@@ -29,14 +29,43 @@ const Header = () => {
     <header className="flex justify-between items-center px-6 py-4 bg-white shadow-md font-montserrat">
       {/* Logo */}
       <div className="text-lg font-bold">
-        <h2>Logo</h2>
+        <a href="/" aria-label="Retour à la page d'accueil">
+          <h1>FDLR Agency</h1>
+        </a>
       </div>
 
-      {/* Burger Menu Icon for Mobile */}
+      <nav
+        className="hidden md:flex space-x-10"
+        aria-label="Navigation principale"
+      >
+        {[
+          { name: "Nos Services", href: "#services" },
+          { name: "Expertise Digitale", href: "#technologies" },
+          { name: "Portfolio", href: "#projects" },
+          { name: "Contact", href: "#contact" },
+        ].map((item) => (
+          <motion.a
+            key={item.name}
+            href={item.href}
+            className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label={`Aller à ${item.name}`}
+          >
+            <span className="mb-1 block">{item.name}</span>
+            <span
+              className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
+            ></span>
+          </motion.a>
+        ))}
+      </nav>
+
+      {/* Menu Mobile */}
       <div className="md:hidden">
         <motion.button
           className="p-2 text-gray-800 rounded-md focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Ouvrir le menu"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -74,25 +103,7 @@ const Header = () => {
         </motion.button>
       </div>
 
-      {/* Navigation (Hidden on mobile, visible on desktop) */}
-      <nav className="hidden md:flex space-x-10">
-        {["Services", "Technologies", "Projets", "Contact"].map((item) => (
-          <motion.a
-            key={item}
-            href={`#${item.toLowerCase()}`}
-            className="relative text-gray-800 hover:text-[#1F4037] transition-colors duration-300 group"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="mb-1 block">{item}</span>
-            <span
-              className="absolute bottom-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#99F2C8] to-[#1F4037] transition-all duration-300 group-hover:w-full"
-            ></span>
-          </motion.a>
-        ))}
-      </nav>
-
-      {/* Mobile Menu (Animated with Variants) */}
+      {/* Menu Mobile animé */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.nav
@@ -101,20 +112,27 @@ const Header = () => {
             exit="closed"
             variants={menuVariants}
             className="absolute top-16 left-0 w-full bg-gray-50 shadow-lg md:hidden z-50"
+            aria-label="Navigation mobile"
           >
             <ul className="flex flex-col items-center space-y-4 px-6 py-6">
-              {["Services", "Technologies", "Projets", "Contact"].map((item) => (
+              {[
+                { name: "Nos Services", href: "#services" },
+                { name: "Expertise Digitale", href: "#technologies" },
+                { name: "Portfolio", href: "#projects" },
+                { name: "Contact", href: "#contact" },
+              ].map((item) => (
                 <motion.li
-                  key={item}
+                  key={item.name}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <a
-                    href={`#${item.toLowerCase()}`}
+                    href={item.href}
                     className="text-gray-800 hover:text-[#1F4037] transition-colors duration-300"
                     onClick={() => setIsMenuOpen(false)}
+                    aria-label={`Aller à ${item.name}`}
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </motion.li>
               ))}
@@ -123,7 +141,7 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      {/* CTA */}
+      {/* Bouton CTA */}
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -132,7 +150,10 @@ const Header = () => {
           background: "linear-gradient(to top left, #99F2C8, #1F4037)", // Contour dégradé
         }}
       >
-        <button className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
+        <button
+          className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white"
+          aria-label="Prendre un rendez-vous"
+        >
           Prendre un RDV
           <span
             className="ml-2 transform transition-transform duration-300"
