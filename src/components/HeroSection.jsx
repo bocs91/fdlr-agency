@@ -64,7 +64,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1, ease: "easeOut" }}
         >
-          Développement, design, cybersécurité, et au-delà.
+          Développement, design, cybersécurité, et au-delà
         </motion.p>
         <motion.div
           className="mt-8 flex justify-center"
