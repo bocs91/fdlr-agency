@@ -9,7 +9,7 @@ const CompletedProjects = () => {
       title: "Refonte d'un site e-commerce",
       description: "Migration vers une architecture moderne et optimisation SEO.",
       tools: ["javascript/react.svg", "javascript/nodejs.svg", "projects/mongodb.svg"],
-      image: "/ecommerce.jpg",
+      image: "img/ecommerce.png",
       stats: [
         { label: "Performance", value: 92 },
         { label: "Satisfaction", value: 85 },
@@ -83,7 +83,7 @@ const CompletedProjects = () => {
       title: "Application de fitness",
       description: "Suivi personnalisé des entraînements et des objectifs de fitness.",
       tools: ["javascript/react.svg", "projects/expo.svg", "cloud/firebase.svg"],
-      image: "/fitness.jpg",
+      image: "img/fitness.png",
       stats: [
         { label: "Engagement", value: 92 },
         { label: "Satisfaction", value: 85 },
@@ -207,7 +207,7 @@ const CompletedProjects = () => {
       title: "Dashboard client",
       description: "Conception et développement d'un tableau de bord utilisateur.",
       tools: ["javascript/angular.svg", "projects/material.svg", "cloud/aws.svg"],
-      image: "/dashboard.jpg",
+      image: "img/dashboard.svg",
       stats: [
         { label: "Ergonomie", value: 90 },
         { label: "Performance", value: 88 },
@@ -372,8 +372,8 @@ const CompletedProjects = () => {
                 className="hidden lg:block"
               >
                 <img
-                  src={currentProject.image}
-                  alt={currentProject.title}
+      src={`/src/assets/icons/devicons/${currentProject.image}`}
+      alt={currentProject.title}
                   className="rounded-xl w-full max-h-[350px] object-cover mx-auto"
                 />
               </motion.div>
