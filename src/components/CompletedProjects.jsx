@@ -9,7 +9,7 @@ const CompletedProjects = () => {
       title: "Refonte d'un site e-commerce",
       description: "Migration vers une architecture moderne et optimisation SEO.",
       tools: ["javascript/react.svg", "javascript/nodejs.svg", "projects/mongodb.svg"],
-      image: "img/ecommerce.png",
+      image: "img/ecommerce2.png",
       stats: [
         { label: "Performance", value: 92 },
         { label: "Satisfaction", value: 85 },
@@ -21,7 +21,7 @@ const CompletedProjects = () => {
       title: "Plateforme éducative en ligne",
       description: "Développement d'une plateforme pour cours en ligne interactifs.",
       tools: ["javascript/vue.svg", "tools/tailwind.svg", "cloud/firebase.svg"],
-      image: "/education.jpg",
+      image: "img/course.png",
       stats: [
         { label: "Utilisateurs actifs", value: 90 },
         { label: "Satisfaction", value: 87 },
@@ -31,9 +31,9 @@ const CompletedProjects = () => {
     {
       id: 3,
       title: "Site vitrine optimisé SEO",
-      description: "Création d'un site vitrine performant pour une startup tech.",
+      description: "Création d'un site vitrine performant pour une startup danoise.",
       tools: ["javascript/nextjs.svg", "projects/graphql.svg", "projects/vercel.svg"],
-      image: "/vitrine.jpg",
+      image: "img/vitrine.png",
       stats: [
         { label: "Visibilité", value: 95 },
         { label: "Temps de chargement", value: 80 },
@@ -45,7 +45,7 @@ const CompletedProjects = () => {
       title: "Application de gestion d'événements",
       description: "Développement d'un tableau de bord pour la gestion d'événements.",
       tools: ["javascript/angular.svg", "projects/material.svg", "cloud/firebase.svg"],
-      image: "/events.jpg",
+      image: "img/events.png",
       stats: [
         { label: "Utilisateurs actifs", value: 88 },
         { label: "Satisfaction", value: 85 },
@@ -57,7 +57,7 @@ const CompletedProjects = () => {
       title: "Portail d'emploi régional",
       description: "Développement d'un site pour connecter employeurs et candidats.",
       tools: ["projects/django.svg", "projects/postgresql.svg", "tools/docker.svg"],
-      image: "/job-portal.jpg",
+      image: "img/jobs.png",
       stats: [
         { label: "Visites", value: 85 },
         { label: "Satisfaction", value: 88 },
@@ -66,10 +66,10 @@ const CompletedProjects = () => {
     },
     {
       id: 6,
-      title: "Portefeuille en ligne",
+      title: "Portfolio en ligne",
       description: "Création d'un portfolio interactif pour un designer professionnel.",
       tools: ["projects/gatsby.svg", "projects/contentful.svg", "projects/netlify.svg"],
-      image: "/portfolio.jpg",
+      image: "img/portfolio.png",
       stats: [
         { label: "Performance", value: 95 },
         { label: "Design", value: 98 },
@@ -83,7 +83,7 @@ const CompletedProjects = () => {
       title: "Application de fitness",
       description: "Suivi personnalisé des entraînements et des objectifs de fitness.",
       tools: ["javascript/react.svg", "projects/expo.svg", "cloud/firebase.svg"],
-      image: "img/fitness.png",
+      image: "img/fitness2.png",
       stats: [
         { label: "Engagement", value: 92 },
         { label: "Satisfaction", value: 85 },
@@ -95,7 +95,7 @@ const CompletedProjects = () => {
       title: "App de réservation en temps réel",
       description: "Application mobile pour réserver des services instantanément.",
       tools: ["javascript/flutter2.svg", "projects/dart.svg", "projects/stripe.svg"],
-      image: "/booking.jpg",
+      image: "img/booking2.png",
       stats: [
         { label: "Réservations", value: 90 },
         { label: "Temps de réponse", value: 80 },
@@ -109,7 +109,7 @@ const CompletedProjects = () => {
       title: "CRM pour petites entreprises",
       description: "Gestion des clients et des ventes via une solution cloud.",
       tools: ["cloud/aws.svg", "tools/docker.svg", "projects/nodejs2.svg"],
-      image: "/crm.jpg",
+      image: "img/crm.png",
       stats: [
         { label: "Adoption", value: 88 },
         { label: "Fiabilité", value: 95 },
@@ -121,7 +121,7 @@ const CompletedProjects = () => {
       title: "ERP sur mesure",
       description: "Solution ERP adaptée aux besoins spécifiques d'une entreprise.",
       tools: ["python/python.svg", "projects/postgresql.svg", "tools/kubernetes.svg"],
-      image: "/erp.jpg",
+      image: "img/erp.png",
       stats: [
         { label: "Productivité", value: 85 },
         { label: "Adoption", value: 90 },
@@ -131,9 +131,9 @@ const CompletedProjects = () => {
     {
       id: 11,
       title: "Tableau de bord analytique",
-      description: "Visualisation des données pour une prise de décision éclairée.",
+      description: "Visualisation des données pour une entrprise située au Canada.",
       tools: ["projects/powerbi.svg", "projects/tableau.svg", "projects/sql.svg"],
-      image: "/analytics.jpg",
+      image: "img/powerbi.png",
       stats: [
         { label: "Fiabilité", value: 95 },
         { label: "Utilisabilité", value: 90 },
@@ -145,7 +145,7 @@ const CompletedProjects = () => {
       title: "SaaS pour la gestion des stocks",
       description: "Solution cloud pour suivre et gérer les stocks en temps réel.",
       tools: ["php/laravel.svg", "javascript/vue.svg", "tools/docker.svg"],
-      image: "/inventory.jpg",
+      image: "img/inventory.png",
       stats: [
         { label: "Précision", value: 92 },
         { label: "Fiabilité", value: 85 },
@@ -159,7 +159,7 @@ const CompletedProjects = () => {
       title: "Système de design",
       description: "Création d'une bibliothèque de composants UI.",
       tools: ["others/figma.svg", "others/sketch.svg", "others/xd.svg"],
-      image: "/design.jpg",
+      image: "img/design.png",
       stats: [
         { label: "Cohérence", value: 95 },
         { label: "Adoption", value: 85 },
@@ -169,9 +169,9 @@ const CompletedProjects = () => {
     {
       id: 14,
       title: "Optimisation des performances",
-      description: "Réduction des temps de chargement d'une application web.",
+      description: "Réduction des temps de chargement d'une application web de gestion de mails.",
       tools: ["tools/webpack.svg", "tools/redis.svg", "projects/nginx.svg"],
-      image: "/performance.jpg",
+      image: "img/performance.jpg",
       stats: [
         { label: "Performance", value: 98 },
         { label: "Satisfaction", value: 90 },
@@ -183,7 +183,7 @@ const CompletedProjects = () => {
       title: "Sécurisation avancée",
       description: "Audit et mise en conformité ISO 27001.",
       tools: ["tools/wireshark2.svg", "tools/nmap.svg", "tools/cloudflare.svg"],
-      image: "/security.jpg",
+      image: "img/cyber.png",
       stats: [
         { label: "Protection", value: 97 },
         { label: "Conformité", value: 100 },
@@ -194,8 +194,8 @@ const CompletedProjects = () => {
       id: 16,
       title: "Réalité augmentée",
       description: "Création d'une app immersive pour des expériences en RA.",
-      tools: ["others/unity.svg", "others/blender.svg", "others/vr.svg"],
-      image: "/ar.jpg",
+      tools: ["projects/csharp.svg","others/unity.svg", "others/blender.svg", "others/vr.svg"],
+      image: "img/vr2.png",
       stats: [
         { label: "Innovation", value: 95 },
         { label: "Engagement", value: 92 },
@@ -207,7 +207,7 @@ const CompletedProjects = () => {
       title: "Dashboard client",
       description: "Conception et développement d'un tableau de bord utilisateur.",
       tools: ["javascript/angular.svg", "projects/material.svg", "cloud/aws.svg"],
-      image: "img/dashboard.svg",
+      image: "img/dashboard2.png",
       stats: [
         { label: "Ergonomie", value: 90 },
         { label: "Performance", value: 88 },
@@ -219,7 +219,7 @@ const CompletedProjects = () => {
       title: "Modélisation architecturale",
       description: "Conception 3D pour un projet immobilier haut de gamme.",
       tools: ["others/blender.svg", "others/vr.svg", "others/unity.svg"],
-      image: "/architecture.jpg",
+      image: "img/architecture.png",
       stats: [
         { label: "Réalisme", value: 95 },
         { label: "Précision", value: 90 },
@@ -231,25 +231,14 @@ const CompletedProjects = () => {
       title: "Support DevOps",
       description: "Automatisation des pipelines CI/CD pour une équipe DevOps.",
       tools: ["projects/jenkins.svg", "tools/docker.svg", "tools/kubernetes.svg"],
-      image: "/devops.jpg",
+      image: "img/devops.jpg",
       stats: [
         { label: "Efficacité", value: 92 },
         { label: "Fiabilité", value: 90 },
         { label: "Adoption", value: 93 },
       ],
     },
-    {
-      id: 20,
-      title: "Simulation VR",
-      description: "Développement d'un simulateur en réalité virtuelle pour la formation.",
-      tools: ["others/unity.svg", "others/vr.svg", "projects/csharp.svg"],
-      image: "/simulation.jpg",
-      stats: [
-        { label: "Réalisme", value: 93 },
-        { label: "Engagement", value: 90 },
-        { label: "Innovation", value: 92 },
-      ],
-    },
+
   ];
   
 
