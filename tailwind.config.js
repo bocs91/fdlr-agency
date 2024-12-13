@@ -11,6 +11,7 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         lato: ["Lato", "sans-serif"],
+        blanka: ['Blanka', 'sans-serif'],
  
       },
     },

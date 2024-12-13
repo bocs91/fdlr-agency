@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center px-6 py-4 bg-white shadow-md font-montserrat">
       {/* Logo */}
-      <div className="text-lg font-bold">
+      <div className="text-lg font-blanka">
         <a href="/" aria-label="Retour à la page d'accueil">
           <h1>FDLR Agency</h1>
         </a>
