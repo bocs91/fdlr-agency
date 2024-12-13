@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center px-6 py-4 bg-white shadow-md font-montserrat">
       {/* Logo */}
-      <div className="text-lg font-blanka">
+      <div className="text-2xl font-blanka">
         <a href="/" aria-label="Retour à la page d'accueil">
           <h1>FDLR Agency</h1>
         </a>
@@ -147,21 +147,24 @@ const Header = () => {
           background: "linear-gradient(to top left, #99F2C8, #1F4037)", 
         }}
       >
-        <button
-          className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white"
-          aria-label="Prendre un rendez-vous"
-        >
-          Prendre un RDV
-          <span
-            className="ml-2 transform transition-transform duration-300"
-            style={{
-              fontWeight: "bold",
-              color: "inherit",
-            }}
-          >
-            →
-          </span>
-        </button>
+  <a
+    href="https://cal.com/fdlr-agency/30min?date=2024-12-24&month=2024-12"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 text-sm font-medium text-[#1F4037] bg-white rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white inline-block"
+    aria-label="Prendre un rendez-vous"
+  >
+    Prendre un RDV
+    <span
+      className="ml-2 transform transition-transform duration-300"
+      style={{
+        fontWeight: "bold",
+        color: "inherit",
+      }}
+    >
+      →
+    </span>
+  </a>
       </motion.div>
     </header>
   );

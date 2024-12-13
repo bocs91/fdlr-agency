@@ -88,19 +88,25 @@ const HeroSection = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <button className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#1F4037] bg-transparent rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white">
-                Commencez
-                <motion.span
-                  className="ml-2"
-                  style={{
-                    fontWeight: "bold",
-                  }}
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  →
-                </motion.span>
-              </button>
+    <a
+      href="https://cal.com/fdlr-agency/30min?date=2024-12-24&month=2024-12"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-[#1F4037] bg-transparent rounded-full transition-all duration-300 hover:bg-gradient-to-tl hover:from-[#99F2C8] hover:to-[#1F4037] hover:text-white inline-block"
+      aria-label="Commencez dès maintenant"
+    >
+      Commencez
+      <motion.span
+        className="ml-2"
+        style={{
+          fontWeight: "bold",
+        }}
+        whileHover={{ x: 5 }}
+        transition={{ duration: 0.2 }}
+      >
+        →
+      </motion.span>
+    </a>
             </motion.div>
           </motion.div>
         </motion.div>

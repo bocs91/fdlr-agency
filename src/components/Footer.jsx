@@ -54,7 +54,7 @@ const Footer = () => {
             className="flex space-x-4"
           >
             <a
-              href="https://twitter.com"
+              href="https://x.com/FDLRAGENCY"
               aria-label="Twitter"
               className="p-[2px] rounded-full transition-transform duration-300 group"
               style={{
@@ -72,43 +72,7 @@ const Footer = () => {
               </div>
             </a>
             <a
-              href="https://facebook.com"
-              aria-label="Facebook"
-              className="p-[2px] rounded-full transition-transform duration-300 group"
-              style={{
-                background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1F4037]">
-                <img
-                  src={FacebookIcon}
-                  alt="Facebook"
-                  className="h-5 w-5 transition-all duration-300 group-hover:brightness-150 group-hover:invert"
-                />
-              </div>
-            </a>
-            <a
-              href="https://instagram.com"
-              aria-label="Instagram"
-              className="p-[2px] rounded-full transition-transform duration-300 group"
-              style={{
-                background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
-              }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-105 group-hover:bg-[#1F4037]">
-                <img
-                  src={InstagramIcon}
-                  alt="Instagram"
-                  className="h-5 w-5 transition-all duration-300 group-hover:brightness-150 group-hover:invert"
-                />
-              </div>
-            </a>
-            <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/fdlr-agency-b99338341/"
               aria-label="LinkedIn"
               className="p-[2px] rounded-full transition-transform duration-300 group"
               style={{

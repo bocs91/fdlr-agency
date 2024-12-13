@@ -405,24 +405,27 @@
 
         </div>
         <div id="technologies" className="max-w-4xl mx-auto px-4 sm:px-8 pb-16 pt-32">
-          <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-4 sm:p-8 rounded-3xl backdrop-blur-sm">
-            <h2 className="font-inter text-lg sm:text-2xl font-medium text-white text-center mb-2 sm:mb-3">
-            Votre projet est unique, et nos compétences le sont aussi      </h2>
-            <p className="font-montserrat text-white/90 text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-lg mx-auto">
-              Contactez-nous pour discuter d'une solution sur-mesure, adaptée à vos besoins.
-            </p>
-            <div className="text-center">
-              <button
-                onClick={() =>
-                  alert("Réservation d'un appel bientôt disponible!")
-                }
-                className="bg-white/10 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20"
-              >
-                Réservez un appel
-              </button>
-            </div>
-          </div>
-        </div>
+  <div className="bg-gradient-to-r from-[#1F4037]/90 to-[#99F2C8]/90 p-4 sm:p-8 rounded-3xl backdrop-blur-sm">
+    <h2 className="font-inter text-lg sm:text-2xl font-medium text-white text-center mb-2 sm:mb-3">
+      Votre projet est unique, et nos compétences le sont aussi
+    </h2>
+    <p className="font-montserrat text-white/90 text-xs sm:text-sm text-center mb-4 sm:mb-6 max-w-lg mx-auto">
+      Contactez-nous pour discuter d'une solution sur-mesure, adaptée à vos besoins.
+    </p>
+    <div className="text-center">
+      <a
+        href="https://cal.com/fdlr-agency/30min?date=2024-12-24&month=2024-12"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white/10 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-white/20 transition-colors duration-300 border border-white/20 inline-block"
+        aria-label="Réservez un appel pour discuter de votre projet"
+      >
+        Réservez un appel
+      </a>
+    </div>
+  </div>
+</div>
+
       </section>
 
 
