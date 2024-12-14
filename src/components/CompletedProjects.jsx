@@ -311,7 +311,7 @@ const CompletedProjects = () => {
   {currentProject.tools.map((tool, index) => (
     <motion.img
       key={index}
-      src={`/src/assets/icons/devicons/${tool}`}
+      src={`/icons/devicons/${tool}`}
             alt={tool.split("/").pop().split(".")[0]}
       className="h-8 w-8"
       whileHover={{ rotate: 360 }}
@@ -361,7 +361,7 @@ const CompletedProjects = () => {
                 className="hidden lg:block"
               >
                 <img
-      src={`/src/assets/icons/devicons/${currentProject.image}`}
+      src={`/icons/devicons/${currentProject.image}`}
       alt={currentProject.title}
                   className="rounded-xl w-full max-h-[350px] object-cover mx-auto"
                 />
