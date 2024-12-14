@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Blanka';
+  src: url('/src/assets/fonts/Blanka/Blanka-Regular.otf') format('opentype'),
+
+}
+
+
 html {
     scroll-behavior: smooth;
   }

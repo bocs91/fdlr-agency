@@ -1,0 +1,24 @@
+{
+    "name": "FDLR Agency",
+    "short_name": "FDLR",
+    "description": "FDLR Agency, votre partenaire digital pour des solutions sur mesure. Développement web, mobile, SaaS, cybersécurité, et plus encore.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1F4037",
+    "icons": [
+      {
+        "src": "/fdlr.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/fdlr.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "lang": "fr",
+    "orientation": "portrait-primary"
+  }
+  
