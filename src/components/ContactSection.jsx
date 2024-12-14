@@ -9,7 +9,7 @@
       {
         icon: PhoneIcon,
         title: "Contactez-nous",
-        description: "01 20 30 40 50",
+        description: "01 20 30 40 50 (changement d'opérateur en cours)",
       },
       {
         icon: MailIcon,

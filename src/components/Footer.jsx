@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
 import TwitterIcon from "../assets/icons/Twitter.svg";
-import FacebookIcon from "../assets/icons/Facebook.svg";
-import InstagramIcon from "../assets/icons/Instagram.svg";
 import LinkedInIcon from "../assets/icons/LinkedIn.svg";
 
 const Footer = () => {
