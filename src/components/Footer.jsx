@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Copyright */}
           <div aria-label="Droits d'auteur">
             <p className="text-sm text-gray-600">
-              &copy; 2024 - Tous droits réservés
+              &copy; 2026 - Tous droits réservés
             </p>
           </div>
 
@@ -36,13 +36,7 @@ const Footer = () => {
             }}
           >
             <p className="text-sm text-gray-600 font-medium font-poppins">
-              <span role="img" aria-label="star">
-                ✨
-              </span>{" "}
-              Inspiré et développé par l'effervescence parisienne{" "}
-              <span role="img" aria-label="night city">
-                🌃
-              </span>
+              Inspiré et développé par l'effervescence parisienne
             </p>
           </motion.div>
 

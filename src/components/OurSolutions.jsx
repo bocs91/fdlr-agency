@@ -279,8 +279,9 @@
     <div
       className="bg-white border rounded-lg shadow-lg p-6 w-full flex flex-col justify-between"
       style={{
-        height: "500px", 
-        overflow: "hidden",
+        minHeight: "500px",
+        height: "auto",
+        overflow: "visible",
       }}
     >
       {/* En-tête de la solution */}

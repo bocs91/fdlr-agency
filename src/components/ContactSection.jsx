@@ -9,7 +9,7 @@
       {
         icon: PhoneIcon,
         title: "Contactez-nous",
-        description: "01 20 30 40 50 (changement d'opérateur en cours)",
+        description: "+33 6 71 84 20 76",
       },
       {
         icon: MailIcon,
@@ -36,17 +36,6 @@
     }}
   >
     Donnez vie à vos ambitions digitales
-    <span
-      role="img"
-      aria-label="Down Arrow"
-      className="ml-2"
-      style={{
-        color: "initial", // Restaure la couleur naturelle
-        background: "none", // Supprime le style de fond hérité
-      }}
-    >
-      👇
-    </span>
   </h2>
   <div
     className="mx-auto mt-4 mb-6 h-[2px] w-80"
