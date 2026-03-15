@@ -28,7 +28,7 @@
         {/* Titre principal */}
         <header className="text-center mb-12">
   <h2
-    className="text-4xl font-light inline-flex items-center justify-center"
+    className="text-4xl font-light inline-flex items-center justify-center pb-2"
     style={{
       background: "linear-gradient(to bottom right, #99F2C8, #1F4037)",
       WebkitBackgroundClip: "text",
